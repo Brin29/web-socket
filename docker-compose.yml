@@ -1,0 +1,13 @@
+services:
+  spring-web-socket:
+    image: spring-web-socket
+    container_name: spring-web-socket-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    networks:
+      - spring-network
+networks:
+  spring-network:
